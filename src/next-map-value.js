@@ -1,6 +1,6 @@
 (function () {
 
-  var global = global || this || self || window;
+  var global = global || this || window || self || Function('return this')();
   var nx = global.nx || require('next-js-core2');
 
   nx.mapValue = function (inObj, inCallback, inContext) {
